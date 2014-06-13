@@ -510,7 +510,8 @@ Options.extract = function(document) {
     };
 
     Reloader.prototype.reloadPage = function() {
-        return this.window.chrome.runtime.reload()
+        this.window.chrome.runtime.reload()
+        this.window.document.location.reload();
     };
 
     Reloader.prototype.reloadImages = function(path) {
